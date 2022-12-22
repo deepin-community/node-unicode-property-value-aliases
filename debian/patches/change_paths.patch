@@ -1,0 +1,15 @@
+Description: change paths to cope with Debian packaging
+Author: Julien Puydt
+Forwarded: Debian-specific
+
+--- a/scripts/build.js
++++ b/scripts/build.js
+@@ -6,7 +6,7 @@
+ 
+ const parsePropertyValueAliases = function() {
+ 	const propertyValueAliasesPerProperty = new Map();
+-	const source = fs.readFileSync('./data/PropertyValueAliases.txt', 'utf8');
++	const source = fs.readFileSync('../data/PropertyValueAliases.txt', 'utf8');
+ 	const lines = source.split('\n');
+ 	for (const line of lines) {
+ 		if (!line || /^#/.test(line)) {

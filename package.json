@@ -1,0 +1,41 @@
+{
+  "name": "unicode-property-value-aliases",
+  "version": "3.6.0",
+  "description": "Unicode property value alias mappings in JavaScript format.",
+  "homepage": "https://github.com/mathiasbynens/unicode-property-value-aliases",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "LICENSE-MIT.txt",
+    "index.js"
+  ],
+  "keywords": [
+    "unicode",
+    "unicode-data",
+    "alias",
+    "aliases",
+    "property alias"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathiasbynens/unicode-property-value-aliases.git"
+  },
+  "bugs": "https://github.com/mathiasbynens/unicode-property-value-aliases/issues",
+  "devDependencies": {
+    "ava": "*",
+    "jsesc": "^2.5.2",
+    "unicode-property-aliases": "^1.5.0"
+  },
+  "scripts": {
+    "download": "curl https://unicode.org/Public/14.0.0/ucd/PropertyValueAliases-14.0.0d13.txt > data/PropertyValueAliases.txt",
+    "build": "node scripts/build.js",
+    "test": "ava tests/tests.js"
+  }
+}
